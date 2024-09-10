@@ -1,0 +1,6 @@
+{
+    "port": 9000,
+    "path": "/",
+    "ssl": {},
+    "allow_discovery": true
+  }

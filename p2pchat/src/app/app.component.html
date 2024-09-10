@@ -1,0 +1,36 @@
+<div id="appContainer">
+  <!-- Left Panel - Chat List -->
+  <div id="leftPanel">
+    <h1>Peer-to-Peer Connection Application</h1>
+    <h3>Your Peer ID: {{ peerId }}</h3>
+    <p>The peer list is refreshed every minute. Click on the peer ID available to connect and send files and texts over LAN!</p>
+    <h3>Available Peers</h3>
+    <ul id="chatList">
+      <li *ngFor="let peer of availablePeers" (click)="connectToPeer(peer)" [class.selected]="peer === selectedPeerId">
+        <div class="chatItem">
+          <input type="radio" name="peerSelection" [(ngModel)]="selectedPeerId" [value]="peer" />
+          <label (click)="connectToPeer(peer)" [class.selected]="peer === selectedPeerId">{{ peer }}</label>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Right Panel - Chat and Message Area -->
+  <div id="rightPanel">
+    <div id="chatWindow">
+      <h2 *ngIf="connectedPeer">__Connection with {{ connectedPeer }}</h2>
+      <div id="chatHistory">
+        <ul>
+          <li *ngFor="let log of logs">{{ log }}</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Message Input Area -->
+    <div id="messageInputArea" *ngIf="connectedPeer">
+      <textarea [(ngModel)]="message" placeholder="Type your message..."></textarea>
+      <input type="file" id="fileInput" (change)="onFileSelected($event)" />
+      <button (click)="sendMessage()">Send</button>
+    </div>
+  </div>
+</div>

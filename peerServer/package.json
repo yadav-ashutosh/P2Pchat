@@ -1,0 +1,17 @@
+{
+  "name": "peersever",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "peerjs --config peerjs-server-config.json --port 9000 --key peerjs --path /myapp",
+    "dev": "node server.js" 
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "peer": "^1.0.2"
+  }
+}
