@@ -22,7 +22,7 @@ PeerJS library
 ## Installation
 
 Clone the repository:
-Copygit clone https://github.com/yourusername/p2p-chat-fileshare.git
+Copygit clone https://github.com/yadav-ashutosh/p2pchat.git
 cd p2p-chat-fileshare
 
 Install dependencies for both the server and the client:
