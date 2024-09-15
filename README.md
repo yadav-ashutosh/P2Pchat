@@ -30,19 +30,16 @@ Copy# For the server
 cd server
 npm install
 
-## For the client
-cd ../client
-npm install
-
-
 ## Usage
 
 Start the PeerServer:
-Copycd server
+cd peerserver
+npm install
 node server.js
 
 Run the P2P chat application:
-Copycd client
+cd p2pchat
+npm install
 ng serve
 
 Open your browser and navigate to http://localhost:4200 (or the port specified by Angular).
