@@ -1,4 +1,6 @@
-# P2P Chat and File Sharing
+# P2P Chat and File Sharing app
+#### Video Demo:  https://www.loom.com/share/8d20fa4230f842228e0f9c79fbf593f8?sid=c419b909-4e63-4ac7-9d10-32714eaad768
+
 ## Overview
 This project implements a peer-to-peer (P2P) chatting and file sharing application without relying on a central server, as is common in traditional WebSocket apps.I built this project using Angular for the client and an Express server as a central system only to establish the initial connection and keep track of clients' online/offline status. Once the connection is established, there is no intermediary between the two communicating clients, unlike in WebSocket chat applications where a constant server-client connection is maintained. This idea can be extrapolated to build large file-sharing apps, like uTorrent, using decentralized network functionality
 
